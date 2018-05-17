@@ -36,10 +36,10 @@ void Dealer::GetCard()
 			_Cards[i * 13 + n]._Number = n+1;
 		}
 	}
-	_Cards[52]._Name = "DaWang";
-	_Cards[52]._Number = _Zero;
-	_Cards[53]._Name = "XiaoWang";
-	_Cards[53]._Number = _Zero;
+	_Cards[52]._Name = "XiaoWang";
+	_Cards[52]._Number = 14;
+	_Cards[53]._Name = "DaWang";
+	_Cards[53]._Number = 15;
 	cout << "取牌完成！" << endl;
 }
 
@@ -66,7 +66,7 @@ void Dealer::Deal(Player &Player1, Player &Player2, Player &Player3)
 {
 	int _Random = rand() % 3;
 
-	for (size_t i = 0; i < 13; i++)
+	for (size_t i = 0; i < 17; i++)
 	{	
 		//给玩家发牌
 		Player1.SetCard(i, _Cards[i * 3]);
